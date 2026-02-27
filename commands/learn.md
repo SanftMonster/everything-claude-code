@@ -33,7 +33,12 @@ Look for:
 
 ## Output Format
 
-Create a skill file at `~/.claude/skills/learned/[pattern-name].md`:
+Create a new skill directory under `~/.claude/skills/` (or update an existing one):
+
+- If it is a general reusable habit, add it to `python-patterns/`.
+- If it is about tests, add it to `python-testing/` or `tdd-workflow/`.
+
+Minimum structure:
 
 ```markdown
 # [Descriptive Pattern Name]
@@ -58,9 +63,9 @@ Create a skill file at `~/.claude/skills/learned/[pattern-name].md`:
 
 1. Review the session for extractable patterns
 2. Identify the most valuable/reusable insight
-3. Draft the skill file
+3. Decide which existing skill directory it belongs to (or create a new one)
 4. Ask user to confirm before saving
-5. Save to `~/.claude/skills/learned/`
+5. Save under `~/.claude/skills/`
 
 ## Notes
 

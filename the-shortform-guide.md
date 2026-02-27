@@ -14,7 +14,7 @@ Here's my complete setup after 10 months of daily use: skills, hooks, subagents,
 
 Skills operate like rules, constricted to certain scopes and workflows. They're shorthand to prompts when you need to execute a particular workflow.
 
-After a long session of coding with Opus 4.5, you want to clean out dead code and loose .md files? Run `/refactor-clean`. Need testing? `/tdd`, `/e2e`, `/test-coverage`. Skills can also include codemaps - a way for Claude to quickly navigate your codebase without burning context on exploration.
+After a long session of coding with Opus 4.5, you want to clean out dead code and loose .md files? Run `/refactor-clean`. Need testing? `/tdd` and then `/verify`. Skills can also include codemaps - a way for Claude to quickly navigate your codebase without burning context on exploration.
 
 ![Terminal showing chained commands](./assets/images/shortform/02-chaining-commands.jpeg)
 *Chaining commands together*
@@ -85,11 +85,8 @@ Subagents work nicely with skills - a subagent capable of executing a subset of 
   planner.md           # Feature implementation planning
   architect.md         # System design decisions
   tdd-guide.md         # Test-driven development
-  code-reviewer.md     # Quality/security review
-  security-reviewer.md # Vulnerability analysis
-  build-error-resolver.md
-  e2e-runner.md
-  refactor-cleaner.md
+  code-reviewer.md     # Quality review
+  refactor-cleaner.md  # Dead code removal
 ```
 
 Configure allowed tools, MCPs, and permissions per subagent for proper scoping.
@@ -105,12 +102,12 @@ Your `.rules` folder holds `.md` files with best practices Claude should ALWAYS 
 
 ```bash
 ~/.claude/rules/
-  security.md      # No hardcoded secrets, validate inputs
   coding-style.md  # Immutability, file organization
   testing.md       # TDD workflow, 80% coverage
   git-workflow.md  # Commit format, PR process
   agents.md        # When to delegate to subagents
-  performance.md   # Model selection, context management
+  hooks.md         # Hook documentation
+  development-workflow.md # How to work day-to-day
 ```
 
 **Example rules:**
@@ -374,29 +371,23 @@ affoon:~ ctx:65% Opus 4.5 19:52
 
 ```
 ~/.claude/rules/
-  security.md      # Mandatory security checks
-  coding-style.md  # Immutability, file size limits
-  testing.md       # TDD, 80% coverage
-  git-workflow.md  # Conventional commits
-  agents.md        # Subagent delegation rules
-  patterns.md      # API response formats
-  performance.md   # Model selection (Haiku vs Sonnet vs Opus)
-  hooks.md         # Hook documentation
+  coding-style.md          # Immutability, file size limits
+  testing.md               # TDD, 80% coverage
+  git-workflow.md          # Conventional commits
+  agents.md                # Subagent delegation rules
+  hooks.md                 # Hook documentation
+  development-workflow.md  # Day-to-day workflow
 ```
 
 ### Subagents
 
 ```
 ~/.claude/agents/
-  planner.md           # Break down features
-  architect.md         # System design
-  tdd-guide.md         # Write tests first
-  code-reviewer.md     # Quality review
-  security-reviewer.md # Vulnerability scan
-  build-error-resolver.md
-  e2e-runner.md        # Playwright tests
-  refactor-cleaner.md  # Dead code removal
-  doc-updater.md       # Keep docs synced
+  planner.md          # Break down features
+  architect.md        # System design
+  tdd-guide.md        # Write tests first
+  code-reviewer.md    # Quality review
+  refactor-cleaner.md # Dead code removal
 ```
 
 ---

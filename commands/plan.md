@@ -104,7 +104,7 @@ If you want changes, respond with:
 
 After planning:
 - Use `/tdd` to implement with test-driven development
-- Use `/build-fix` if build errors occur
+- If you hit build errors, fix them, then re-run `/verify`
 - Use `/code-review` to review completed implementation
 
 ## Related Agents

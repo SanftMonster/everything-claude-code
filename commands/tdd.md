@@ -285,7 +285,7 @@ Coverage: 100% ✅ (Target: 80%)
 - External service calls
 - React components with hooks
 
-**E2E Tests** (use `/e2e` command):
+**Integration/E2E Tests**:
 - Critical user flows
 - Multi-step processes
 - Full stack integration
@@ -313,9 +313,9 @@ Never skip the RED phase. Never write code before tests.
 
 - Use `/plan` first to understand what to build
 - Use `/tdd` to implement with tests
-- Use `/build-fix` if build errors occur
+- If you hit build errors, fix them, then re-run `/verify`
 - Use `/code-review` to review implementation
-- Use `/test-coverage` to verify coverage
+- Use `/verify` to confirm build/tests/coverage before shipping
 
 ## Related Agents
 

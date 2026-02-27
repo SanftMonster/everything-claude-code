@@ -165,8 +165,8 @@ function runTests() {
     const logs = captureLog(() => output.nextSteps());
     const combined = logs.join('\n');
     assert.ok(combined.includes('Next Steps'), 'Should show Next Steps title');
-    assert.ok(combined.includes('/instinct-import'), 'Should show import command');
-    assert.ok(combined.includes('/evolve'), 'Should show evolve command');
+    assert.ok(combined.includes('/learn') || combined.includes('/verify'),
+      'Should suggest at least one retained command in Next Steps');
   })) passed++; else failed++;
 
   // footer() tests

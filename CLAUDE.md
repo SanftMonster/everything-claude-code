@@ -35,11 +35,12 @@ The project is organized into several core components:
 
 - `/tdd` - Test-driven development workflow
 - `/plan` - Implementation planning
-- `/e2e` - Generate and run E2E tests
 - `/code-review` - Quality review
-- `/build-fix` - Fix build errors
 - `/learn` - Extract patterns from sessions
-- `/skill-create` - Generate skills from git history
+- `/eval` - Eval-driven workflow
+- `/verify` - Run verification checks
+- `/checkpoint` - Create/verify workflow checkpoints
+- `/refactor-clean` - Safely remove dead code
 
 ## Development Notes
 

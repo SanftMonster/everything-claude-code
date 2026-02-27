@@ -158,9 +158,9 @@ ${chalk.bold('Files Tracked:')}    ${chalk.green(data.files)}
   nextSteps() {
     console.log(box('📋 Next Steps', `
 ${chalk.yellow('1.')} Review the generated SKILL.md
-${chalk.yellow('2.')} Import instincts: ${chalk.cyan('/instinct-import <path>')}
-${chalk.yellow('3.')} View learned patterns: ${chalk.cyan('/instinct-status')}
-${chalk.yellow('4.')} Evolve into skills: ${chalk.cyan('/evolve')}
+${chalk.yellow('2.')} If needed, refine the skill via ${chalk.cyan('/refactor-clean')}
+${chalk.yellow('3.')} Run ${chalk.cyan('/verify')} to confirm tests/lint/build
+${chalk.yellow('4.')} Capture learnings with ${chalk.cyan('/learn')}
 `));
     console.log('\n');
   }
